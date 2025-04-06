@@ -7,7 +7,7 @@ export function HowItWorksSection() {
     <div className="py-24 bg-background" id="how-it-works">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
-          title="How Our Boosting Service Works"
+          title="How our boosting service works"
           description="Getting your account boosted is simple and straightforward with our service."
         />
 

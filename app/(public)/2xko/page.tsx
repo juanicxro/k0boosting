@@ -1,7 +1,7 @@
 import { HeroSection } from "./components/hero";
 import { BenefitsSection } from "./components/benefits";
 import { HowItWorksSection } from "./components/how-it-works";
-import { PricingSection } from "./components/pricing";
+import { PricingSection } from "./components/sections/pricing-section";
 import { TestimonialsSection } from "./components/testimonials";
 import { FAQSection } from "./components/faq";
 import { CTASection } from "./components/cta";

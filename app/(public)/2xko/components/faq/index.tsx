@@ -7,7 +7,7 @@ export function FAQSection() {
     <div className="bg-muted py-24" id="faq">
       <div className="max-w-3xl mx-auto px-6">
         <SectionHeading
-          title="Frequently Asked Questions"
+          title="Frequently asked questions"
           description="Get answers to the most common questions about our boosting services."
         />
 

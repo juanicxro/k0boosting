@@ -1,0 +1,107 @@
+# K0 Boosting App - Padrões e Regras de Desenvolvimento
+
+## Princípios SOLID
+
+1. **Princípio da Responsabilidade Única (SRP)**
+
+   - Cada componente deve ter uma única responsabilidade
+   - Separe UI da lógica de negócios (use hooks para lógica)
+   - Um arquivo = um componente/hook/contexto
+
+2. **Princípio Aberto/Fechado (OCP)**
+
+   - Extensão via props e propriedades opcionais
+   - Use composição em vez de herança
+   - Evite modificar componentes existentes; crie novos quando necessário
+
+3. **Princípio da Substituição de Liskov (LSP)**
+
+   - Componentes filhos devem ser substituíveis por seus componentes base
+   - Mantenha interfaces consistentes
+
+4. **Princípio da Segregação de Interface (ISP)**
+
+   - Props de componentes devem ser mínimas e específicas
+   - Use tipos TypeScript para definir interfaces claras
+   - Prefira múltiplos componentes pequenos a um grande
+
+5. **Princípio da Inversão de Dependência (DIP)**
+   - Dependa de abstrações (interfaces, hooks), não de implementações concretas
+   - Use injeção de dependência via props ou contexto
+
+## Estrutura de Diretórios e Organização
+
+- `app/`: Estrutura de rotas Next.js
+- `components/`: Componentes globais reutilizáveis
+  - `components/ui/`: Componentes básicos de UI (botões, inputs, etc.)
+  - `components/{feature}/`: Componentes específicos de feature (ex: price-calculator, navbar)
+- `app/store/`: Estados globais Zustand
+- `app/(public)/`: Páginas públicas
+- `app/(protected)/`: Páginas que requerem autenticação
+- `app/{feature}/`: Páginas e componentes específicos de uma feature
+
+## Convenções de Nomenclatura
+
+- **Componentes**: PascalCase (ex: `PriceCalculator.tsx`)
+- **Hooks**: camelCase com prefixo 'use' (ex: `useCalculator.ts`)
+- **Constantes/Dados**: UPPERCASE_SNAKE_CASE (ex: `RANKS, CHAMPIONS`)
+- **Funções e variáveis**: camelCase
+- **Tipos e Interfaces**: PascalCase (ex: `CalculatorProps`)
+- **ID de arquivos de componentes**: index.tsx para o componente principal da pasta
+
+## Padrões de Componentes React
+
+- Prefira componentes funcionais com hooks
+- Extraia lógica para hooks customizados (`use{ComponentName}.ts`)
+- Use `"use client"` apenas quando necessário
+- Extraia dados para arquivos separados (ex: `data.ts`)
+- Componentes devem aceitar props bem definidas com interfaces TypeScript
+- Use prop destructuring com valores padrão
+- Evite props drilling; use context ou Zustand
+
+## Estado Global e Gerenciamento de Estado
+
+- Use Zustand para estado global
+- Organize stores por domínio funcional
+- Sempre defina tipos para o estado
+- Implemente ações dentro da store
+- Evite mutação direta de estado
+- Prefira múltiplas stores pequenas a uma grande
+
+## Estilização
+
+- Use Tailwind CSS para estilização
+- Componentes devem aceitar `className` para override
+- Use classes utilitárias no lugar de CSS personalizado
+- Mantenha estilos de componentes dentro de seus respectivos arquivos
+- Use variables CSS para cores, espaçamentos, etc. consistentes
+- Evite inline styles
+
+## TypeScript
+
+- Defina tipos para todas as props e estados
+- Use tipos genéricos quando apropriado
+- Evite `any`; use `unknown` quando necessário
+- Extraia interfaces/tipos para um arquivo separado quando reutilizados
+- Documente tipos complexos
+
+## Importações e Exportações
+
+- Use imports relativos para arquivos no mesmo diretório
+- Use imports de caminho absoluto (ex: `@/components`) para outros diretórios
+- Export default apenas para componentes de página ou principais
+- Use export nomeado para componentes auxiliares, hooks, etc.
+- Organize imports: React primeiro, depois bibliotecas, depois componentes locais
+
+## Testes
+
+- Teste componentes isoladamente
+- Use mocks para dependências externas
+- Teste hooks separadamente de componentes
+
+## Padrões de Performance
+
+- Use React.memo() para componentes que renderizam frequentemente
+- Evite renderizações desnecessárias
+- Utilize `useMemo` e `useCallback` para valores e funções referenciadas em dependências
+- Mova estado para o nível mais baixo possível na árvore de componentes

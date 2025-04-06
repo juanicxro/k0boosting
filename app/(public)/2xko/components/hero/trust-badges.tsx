@@ -2,7 +2,7 @@ import { Shield, Star, Users } from "lucide-react";
 
 export function TrustBadges() {
   return (
-    <div className="flex items-center gap-6 pt-8">
+    <div className="flex flex-wrap justify-center items-center gap-6 pt-8">
       <div className="flex items-center gap-2">
         <div className="flex">
           {[...Array(5)].map((_, i) => (

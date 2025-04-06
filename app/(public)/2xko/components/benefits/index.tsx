@@ -7,7 +7,7 @@ export function BenefitsSection() {
     <div className="bg-muted py-24" id="benefits">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
-          title="Why Choose Our 2xKO Boosting Service?"
+          title="Why choose our 2xKO boosting service?"
           description="We offer the most reliable and professional boosting service in the industry with a team of elite players."
         />
 

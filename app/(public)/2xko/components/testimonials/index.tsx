@@ -7,7 +7,7 @@ export function TestimonialsSection() {
     <div className="py-24 bg-background" id="testimonials">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
-          title="What Our Customers Say"
+          title="What our customers say"
           description="Don't just take our word for it - hear from our satisfied customers."
         />
 
