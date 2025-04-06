@@ -1,0 +1,45 @@
+export const pricingPlansData = [
+  {
+    title: "Standard Boost",
+    price: "$49",
+    description: "Perfect for players looking to climb quickly",
+    features: [
+      "Solo queue boosting",
+      "Normal speed completion",
+      "24/7 support",
+      "Basic VPN protection",
+    ],
+    popular: false,
+    cta: "Get Started",
+  },
+  {
+    title: "Premium Boost",
+    price: "$79",
+    description: "Our most popular boosting package",
+    features: [
+      "Solo queue boosting",
+      "Priority boosting (faster)",
+      "Play with specific champions",
+      "Advanced VPN protection",
+      "Live chat with your booster",
+    ],
+    popular: true,
+    cta: "Choose Premium",
+  },
+  {
+    title: "VIP Boost",
+    price: "$129",
+    description: "The ultimate boosting experience",
+    features: [
+      "Solo or duo queue boosting",
+      "Highest priority (fastest)",
+      "Play with specific champions",
+      "Elite VPN protection",
+      "Live chat with your booster",
+      "1 Free coaching session",
+      "Offline mode option",
+    ],
+    popular: false,
+    cta: "Go VIP",
+  },
+];
