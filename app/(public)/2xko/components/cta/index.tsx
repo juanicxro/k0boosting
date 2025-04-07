@@ -13,10 +13,10 @@ export function CTASection() {
             gameplay with our professional boosting services.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <CTAButton href="#pricing" variant="primary">
+            <CTAButton href="/2xko/order" variant="primary">
               Get started now
             </CTAButton>
-            <CTAButton href="#" variant="secondary">
+            <CTAButton href="/2xko/contact" variant="secondary">
               Contact support
             </CTAButton>
           </div>

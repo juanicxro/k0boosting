@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { TrustBadges } from "./trust-badges";
 
@@ -17,7 +18,7 @@ export function HeroContent() {
       </p>
       <div className="flex flex-wrap justify-center gap-4 pt-4">
         <Link
-          href="#pricing"
+          href="/2xko/order"
           className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md font-semibold transition-colors"
         >
           BOOST NOW!
